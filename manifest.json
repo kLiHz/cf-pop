@@ -1,5 +1,5 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "__MSG_extensionName__",
   "description": "__MSG_extensionDescription__",
   "default_locale": "en",
@@ -13,20 +13,20 @@
   },
 
   "background": {
-    "scripts": [
-      "background.js"
-    ]
+    "service_worker": "background.js"
   },
   "permissions": [
-    "webRequest",
+    "webRequest"
+  ],
+  "host_permissions": [
     "<all_urls>"
   ],
-  "browser_action": {
-    "default_icon": "icons/Cloudflare-gray.svg",
+  "action": {
+    "default_icon": "misc/global.png",
     "default_title": "__MSG_unknown__"
   },
   "icons": {
-    "48": "icons/global-distribution.svg",
-    "96": "icons/global-distribution.svg"
+    "48": "misc/global.png",
+    "96": "misc/global.png"
   }
 }
